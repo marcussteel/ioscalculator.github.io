@@ -1,0 +1,164 @@
+
+
+:root {
+    --siyah : #000;
+    --tusbcgop : #a5a5a5;
+    --tusbcgsari : #f1a33c;
+    --tusbcgsayi : #333;
+    --tuscolor : #fff;
+    --fontsize : 45px;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    height: 600px;
+    width: 360px;
+    background-color: var(--siyah);
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.ekran {
+    height: 165px;
+    width: 340px;
+    margin: auto;
+    font-size: 50px;
+    padding: 20px;
+
+    color: azure;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: right;
+
+}
+.screenbottom, .screentop{
+    display: flex;
+    justify-content: right;
+    text-align: right;
+    
+}
+.screenbottom{
+    font-size: 1rem;
+}
+
+.tuslar {
+    display: grid;
+    grid-template-columns: 72px 72px 72px 72px;
+    grid-template-rows: 72px 72px 72px 72px 72px;
+    color: var(--tuscolor);
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 15px;
+    text-align: center;
+    
+}
+.box {
+    background-color: var(--tusbcgsayi);
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.box:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.row1-1 , .row1-2, .row1-3 {
+    background-color: var(--tusbcgop);
+    color: var(--siyah);
+}
+.row1-4 , .row2-4 , .row3-4, .row4-4 {
+    background-color: var(--tusbcgsari);
+}
+
+.tuslar .box{
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    font-size: 35px;
+    
+    
+}
+.container .tuslar .row5-1{
+    grid-row: 5/6;
+    grid-column: 1/3;
+    /* width: 130px; */
+    
+}
+
+.container .tuslar .row5-1{
+    width: 154px;
+    border-radius: 36px;
+    text-align: left;
+    padding-left: 25px;
+    
+}
+@media (max-width: 425px){
+    
+    .container {
+        height: 100vh;
+        width: 100%;
+        border-radius:0;
+        
+    }
+    .ekran {
+        height: 190px;
+        
+    }
+    .tuslar {
+        margin-bottom:10px ;
+        gap:15px;
+    }
+}
+@media (max-width:360px){
+    .ekran {
+        height: 140px;
+    }
+    body {
+        background-color: #000;
+    }
+    .tuslar {
+        display: grid;
+        grid-template-columns: repeat(4,60px);
+        grid-template-rows:repeat(5,60px);
+        color: var(--tuscolor);
+        gap: 15px 10;
+        justify-content: center;
+        margin-bottom: 15px;
+        text-align: center;
+        
+    }
+    .tuslar .box  {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        font-size: 35px;
+        
+        
+    }
+    .container .tuslar .row5-1{
+        width: 100%;
+        border-radius: 36px;
+        text-align: left;
+        padding-left: 18px;
+        
+    }
+    
+}
